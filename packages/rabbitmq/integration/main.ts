@@ -7,8 +7,8 @@ async function bootstrap() {
   console.log('Creating an app');
   const config: RabbitMQConfig = {
     uri: [
-      'amqps://fxzgrted:EmWTAxM9cRzLbSKR_YBte-WcsA5doHE7@sparrow.rmq.cloudamqp.com/fxzgrted',
-      'amqps://fxzgrted:EmWTAxM9cRzLbSKR_YBte-WcsA5doHE7@sparrow.rmq.cloudamqp.com/fxzgrted',
+      'abc',
+      'abc
     ],
     exchanges: [],
   };
