@@ -112,7 +112,7 @@ export class AmqpConnection {
   }
 
   private async initCore(): Promise<void> {
-    this.logger.log('Trying to connect to a RabbitMQ broker');
+    this.logger.log('[RabbitMQBroker] Establishing connection..');
 
     this._managedConnection = amqpcon.connect(
       Array.isArray(this.config.uri) ? this.config.uri : [this.config.uri],
@@ -121,7 +121,7 @@ export class AmqpConnection {
 
     this._managedConnection.on('connect', ({ connection }) => {
       this._connection = connection;
-      this.logger.log('Successfully connected to a RabbitMQ broker');
+      this.logger.log('[RabbitMQBroker] Successfully connected');
     });
 
     this._managedChannel = this._managedConnection.createChannel({
@@ -129,7 +129,7 @@ export class AmqpConnection {
     });
 
     this._managedChannel.on('connect', () =>
-      this.logger.log('Successfully connected a RabbitMQ channel')
+      this.logger.log('[RabbitMQChannel] Successfully connected')
     );
 
     this._managedChannel.on('error', (err, { name }) =>

@@ -5,3 +5,4 @@ export * from './rabbitmq.constants';
 export * from './rabbitmq.interfaces';
 export * from './rabbitmq.module';
 export * from './rabbitmq.helpers';
+//# sourceMappingURL=index.d.ts.map

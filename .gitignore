@@ -6,3 +6,5 @@ packages/*/lib
 coverage/
 junit.xml
 tsconfig.build.tsbuildinfo
+dist/
+/packages/rabbitmq/integration-dist/
